@@ -20,3 +20,10 @@
 
 > patchFlage 标记不对 Fragment 类型进行处理，即克隆的对象类型如果是 Fragment ，那 patchFlage 字段会带有 patchFlag 标记。
 
+#### shapeFlag 标记children的信息
+
+> 暂不清楚用法
+
+## h函数
+
+> h函数就是对 createVnode 进行的一层包装，可以更方便的使用，而不必进行过多的判断和参数位置限制
