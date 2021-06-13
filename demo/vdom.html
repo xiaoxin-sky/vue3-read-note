@@ -1,0 +1,46 @@
+<style>
+  .red{
+    background-color: red;
+  }
+  .green{
+    background-color: green;
+  }
+</style>
+<div id="app"></div>
+<script>
+  function h(tag,props,children){
+    return {
+      tag,
+      props,
+      children
+    }
+  }
+  // 挂载原理
+  function mount(vnode,containder){
+    const el = document.createElement(vnode.tag)
+    // props
+    if(vnode.props){
+      for(const key in vnode.props){
+        const value = vnode.props[key]
+        el.setAttribute(key,value)
+      }
+    }
+    // children
+    if(vnode.children){ 
+      if(typeof vnode.children === 'string'){
+        el.textContent = vnode.children
+      }else{
+        vnode.children.forEach(child=>{
+          mount(child,el)
+        })
+      }
+    }
+    containder.appendChild(el)
+  }
+  const vdom = h('div',{class:'red'},[
+    h('div',{class:'green'},[
+      h('span',{},'hello')
+    ])
+  ])
+  mount(vdom,document.getElementById('app'))
+</script>
