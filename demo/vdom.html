@@ -17,7 +17,7 @@
   }
   // 挂载原理
   function mount(vnode,containder){
-    const el = document.createElement(vnode.tag)
+    const el = vnode.el = document.createElement(vnode.tag)
     // props
     if(vnode.props){
       for(const key in vnode.props){
@@ -43,4 +43,17 @@
     ])
   ])
   mount(vdom,document.getElementById('app'))
+  
+  // 找出最小数量多的需要执行的dom操作，更新屏幕状态
+  function patch(n1,n2){
+    
+  }
+
+  const vdom2 = h('div',{class:'red'},[
+    h('div',{class:'green'},[
+      h('span',{},'world')
+    ])
+  ])
+
+  patch(vdom,vdom2)
 </script>
