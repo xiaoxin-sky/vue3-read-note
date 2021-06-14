@@ -1,0 +1,37 @@
+<script>
+  const depMap =new WeakMap()
+  let activeEffect = null
+  class Dep {
+    deps = "";
+    constructor(val){
+      this._value = val
+    }
+    get value(){
+      this.depend()
+      return this._value
+    }
+    set value(newValue){
+      this._value = newValue;
+      this.notify()
+    }
+    depend() {
+      if(activeEffect){
+        this.deps = activeEffect
+      }
+    }
+    notify() {
+      this.deps()
+    }
+  }
+  const dep = new Dep('hello')
+  function watchEffect(effect) {
+    activeEffect = effect
+    effect()
+    activeEffect = null
+  }
+  watchEffect(() => {
+    console.log(dep.value);
+  });
+  dep.value = 'dj'
+  console.log(dep)
+</script>
