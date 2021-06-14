@@ -1,59 +1,107 @@
 <style>
-  .red{
+  .red {
     background-color: red;
   }
-  .green{
+  .green {
     background-color: green;
   }
 </style>
 <div id="app"></div>
 <script>
-  function h(tag,props,children){
+  function h(tag, props, children) {
     return {
       tag,
       props,
-      children
-    }
+      children,
+    };
   }
   // 挂载原理
-  function mount(vnode,containder){
-    const el = vnode.el = document.createElement(vnode.tag)
+  function mount(vnode, containder) {
+    const el = (vnode.el = document.createElement(vnode.tag));
     // props
-    if(vnode.props){
-      for(const key in vnode.props){
-        const value = vnode.props[key]
-        el.setAttribute(key,value)
+    if (vnode.props) {
+      for (const key in vnode.props) {
+        const value = vnode.props[key];
+        el.setAttribute(key, value);
       }
     }
     // children
-    if(vnode.children){ 
-      if(typeof vnode.children === 'string'){
-        el.textContent = vnode.children
-      }else{
-        vnode.children.forEach(child=>{
-          mount(child,el)
-        })
+    if (vnode.children) {
+      if (typeof vnode.children === "string") {
+        el.textContent = vnode.children;
+      } else {
+        vnode.children.forEach((child) => {
+          mount(child, el);
+        });
       }
     }
-    containder.appendChild(el)
+    containder.appendChild(el);
   }
-  const vdom = h('div',{class:'red'},[
-    h('div',{class:'green'},[
-      h('span',{},'hello')
-    ])
-  ])
-  mount(vdom,document.getElementById('app'))
-  
+  const vdom = h("div", { class: "red" }, [
+    h("div", { class: "green" }, 'hellodj'),
+  ]);
+  mount(vdom, document.getElementById("app"));
+
   // 找出最小数量多的需要执行的dom操作，更新屏幕状态
-  function patch(n1,n2){
-    
+  function patch(n1, n2) {
+    const oldVnode = n1;
+    const newVnode = n2;
+    const el = (n2.el = n1.el);
+    //props
+    const oldProps = n1.props || {};
+    const newProps = n2.props || {};
+    for (const key in newProps) {
+      const oldProp = oldProps[key];
+      const newProp = newProps[key];
+      if (oldProp !== newProp) {
+        el.setAttribute(key, newProp);
+      }
+    }
+    for (const key in oldProps) {
+      if (!(key in newProps)) {
+        el.removeAttribute(key);
+      }
+    }
+    // children
+    const oldChildren = n1.children;
+    const newChildren = n2.children;
+    if (typeof newChildren === "string") {
+      if (typeof oldChildren === "string") {
+        if (oldChildren !== newChildren) {
+          el.textContent = newChildren;
+        }
+      } else {
+        el.textContent = newChildren;
+      }
+    } else {
+      if (typeof oldChildren === "string") {
+        el.innerHTML = "";
+        newChildren.forEach((vnode) => mount(vnode, el));
+      } else {
+        if (oldChildren !== newChildren) {
+          const commonLen = Math.min(newChildren.length, oldChildren.length);
+          for (let i = 0; i < commonLen; i++) {
+            if (oldChildren[i] !== newChildren[i]) {
+              patch(oldChildren[i], newChildren[i]);
+            }
+          }
+          if (newChildren.length > oldChildren.length) {
+            newChildren
+              .splice(oldChildren.length)
+              .forEach((vnode) => mount(vnode, el));
+          } else {
+            oldChildren
+              .splice(newChildren.length)
+              .forEach((vnode) => el.removeChild(vnode.el));
+          }
+        }
+      }
+    }
   }
 
-  const vdom2 = h('div',{class:'red'},[
-    h('div',{class:'green'},[
-      h('span',{},'world')
-    ])
-  ])
+  const vdom2 = h("div", { class: "red" }, [
+    h("div", { class: "green" }, [h("span", {}, "world")]),
+  ]);
 
-  patch(vdom,vdom2)
+  patch(vdom, vdom2);
 </script>
