@@ -1,5 +1,6 @@
 <div id="app"></div>
 <script>
+  // 创建vNode
   function h(tag, props, children) {
     return {
       tag,
@@ -7,7 +8,7 @@
       children,
     };
   }
-  // 挂载原理
+  // 挂载组件，涉及到 vnode 转换 dom
   function mount(vnode, containder) {
     const el = (vnode.el = document.createElement(vnode.tag));
     // props
@@ -34,6 +35,7 @@
     }
     containder.appendChild(el);
   }
+  // diff 涉及到2个新旧组件对比，内置 dom api 调用
   function patch(n1, n2) {
     const oldVnode = n1;
     const newVnode = n2;
@@ -90,6 +92,7 @@
     }
   }
 
+  // reactive 部分 
   let activeEffect = null;
   class Dep {
     deps = "";
@@ -102,6 +105,7 @@
       this.deps();
     }
   }
+  
   function watchEffect(effect) {
     activeEffect = effect;
     effect();
