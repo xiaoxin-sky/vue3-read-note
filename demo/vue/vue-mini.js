@@ -17,7 +17,11 @@ function mount(vnode, container) {
   if (vnode.props) {
     for (const key in vnode.props) {
       const value = vnode.props[key];
-      el.setAttribute(key, value);
+      if (key.startsWith("on")) {
+        el.addEventListener(key.slice(2).toLowerCase(), value);
+      } else {
+        el.setAttribute(key, value);
+      }
     }
   }
   // 处理 children
@@ -76,7 +80,67 @@ function patch(n1, n2) {
   }
 }
 
-// 响应式对象
-function reactive(obj){
-  
+const targetMap = new WeakMap();
+let activeEffect;
+// 收集effect依赖
+function effect(fn) {
+  activeEffect = fn;
+  fn();
+  activeEffect = null;
 }
+
+// 响应式对象
+function reactive(obj) {
+  const proxy = new Proxy(obj, {
+    get(target, key, receiver) {
+      if (activeEffect) {
+        targetMap.set(target, activeEffect);
+      }
+      return Reflect.get(target, key, receiver);
+    },
+    set(target, key, value, receiver) {
+      const effect = targetMap.get(target);
+      Reflect.set(target, key, value, receiver);
+      if (effect) {
+        effect();
+      }
+    },
+  });
+  return proxy;
+}
+
+// 结合组合式 api，构建 mini-vue
+
+const App = {
+  data: reactive({ a: 1 }),
+  render() {
+    return h(
+      "button",
+      {
+        onClick: () => {
+          this.data.a++;
+        },
+      },
+      String(this.data.a)
+    );
+  },
+};
+
+// mount(App.render(), document.getElementById("app"));
+
+function mountApp(component, container) {
+  let isMount = false;
+  let preVnode;
+  effect(() => {
+    if (!isMount) {
+      isMount = true
+      preVnode = component.render();
+      mount(preVnode, container);
+    } else {
+      const newVnode = component.render();
+      patch(preVnode, newVnode);
+      preVnode = newVnode;
+    }
+  });
+}
+mountApp(App, document.getElementById("app"));
