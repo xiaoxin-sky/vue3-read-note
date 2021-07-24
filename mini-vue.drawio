@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-24T13:51:46.980Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="_BX_34ygdIkHFnk1areO" version="14.9.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-24T14:16:20.974Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="GqfuvCybcnhOHYn6JPSi" version="14.9.2" type="github">
   <diagram id="I8amUebuneuJQ4XskiNJ" name="第 1 页">
-    <mxGraphModel dx="1810" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="7957" dy="5014" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,8 +25,15 @@
         <mxCell id="YHqq5NevsVm51CY2uchS-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-6" target="YHqq5NevsVm51CY2uchS-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-6" target="YHqq5NevsVm51CY2uchS-117">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="799" y="-42" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="YHqq5NevsVm51CY2uchS-6" value="patch" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="737.5" y="210" width="120" height="60" as="geometry" />
+          <mxGeometry x="737.5" y="210" width="122.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YHqq5NevsVm51CY2uchS-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-8" target="YHqq5NevsVm51CY2uchS-10">
           <mxGeometry relative="1" as="geometry" />
@@ -244,6 +251,60 @@
         </mxCell>
         <mxCell id="YHqq5NevsVm51CY2uchS-54" value="updateComponent" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1000" y="770" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-99" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-95" target="YHqq5NevsVm51CY2uchS-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-95" value="reactive数据更新被触发后，也就是调用 trigger，trigger的渲染会被加入到&lt;font color=&quot;#ff0000&quot;&gt;异步队列中&lt;/font&gt;。" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="-990" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-101" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-98" target="YHqq5NevsVm51CY2uchS-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-98" value="异步队列中调用effect方法" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="-860" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-100" target="YHqq5NevsVm51CY2uchS-104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-100" value="获取新的实例 instacn 的next、vnode。" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="-750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-104" target="YHqq5NevsVm51CY2uchS-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-104" value="判断next 是否需要更新组件数据props，slots" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="-640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-106" target="YHqq5NevsVm51CY2uchS-110">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-106" value="创建新的实例代理上下文，proxyTOUse，&lt;br&gt;注入依赖调用渲染函数" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="-520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-110" target="YHqq5NevsVm51CY2uchS-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-110" value="创建nextTree" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="-420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-116" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-113" target="YHqq5NevsVm51CY2uchS-115">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-113" value="调用 beforeUpdated hook&lt;br&gt;onVnodeBeforeUpdate hook" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="912.5" y="-310" width="165" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-118" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-115" target="YHqq5NevsVm51CY2uchS-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-115" target="YHqq5NevsVm51CY2uchS-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-115" value="&lt;div&gt;// 用旧的 vnode 和新的 vnode 交给 patch 来处理&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; patch(prevTree, nextTree, prevTree.el, instance);&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="908.75" y="-200" width="172.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-117" value="触发&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; updated hook&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; onVnodeUpdated hook" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="888.75" y="-60" width="212.5" height="75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
