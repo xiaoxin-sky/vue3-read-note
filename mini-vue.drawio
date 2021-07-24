@@ -1,1 +1,251 @@
-<mxfile host="app.diagrams.net" modified="2021-07-24T12:43:25.122Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" version="14.9.2" etag="Rr0rVuSxYVzNYh_f9jNF" type="github"><diagram id="I8amUebuneuJQ4XskiNJ">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-07-24T13:51:46.980Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="_BX_34ygdIkHFnk1areO" version="14.9.2" type="github">
+  <diagram id="I8amUebuneuJQ4XskiNJ" name="第 1 页">
+    <mxGraphModel dx="1810" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YHqq5NevsVm51CY2uchS-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-1" target="YHqq5NevsVm51CY2uchS-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-1" value="createApp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="210" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-2" target="YHqq5NevsVm51CY2uchS-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-2" value="createVNode&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="255" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-4" target="YHqq5NevsVm51CY2uchS-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-4" value="render(rootVnode,rootDom)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="455" y="210" width="175" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-6" target="YHqq5NevsVm51CY2uchS-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-6" value="patch" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="737.5" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-8" target="YHqq5NevsVm51CY2uchS-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-8" target="YHqq5NevsVm51CY2uchS-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-8" value="是elementVnode还是componentVnode" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="673.13" y="360" width="248.75" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-10" target="YHqq5NevsVm51CY2uchS-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-10" value="procressElement" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="408.755" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-16" target="YHqq5NevsVm51CY2uchS-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-16" target="YHqq5NevsVm51CY2uchS-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-16" value="是挂载还是更新" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="398.13" y="560" width="141.25" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-18" target="YHqq5NevsVm51CY2uchS-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-18" value="mountElement" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="187.505" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-20" target="YHqq5NevsVm51CY2uchS-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-20" value="vnode.el=hostCreateElement" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="146.26" y="740" width="202.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-22" target="YHqq5NevsVm51CY2uchS-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-22" target="YHqq5NevsVm51CY2uchS-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-22" value="shapeFlag是什么类型的？" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;strokeColor=#000000;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="163.76" y="890" width="167.51" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-24" target="YHqq5NevsVm51CY2uchS-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-24" value="如果是shapeFlag&amp;amp;ShapeFlag.Text_CHILDREN" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="895" width="227.51" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-26" target="YHqq5NevsVm51CY2uchS-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-16" y="1200" />
+              <mxPoint x="250" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-26" value="invoke hostSetElementText" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-76.245" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-28" target="YHqq5NevsVm51CY2uchS-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-28" value="&lt;span&gt;updateElement&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="539.38" y="770" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-30" target="YHqq5NevsVm51CY2uchS-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-30" value="如果是shapeFlag&amp;amp;ShapeFlag.ARRAY_CHILDREN" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="435.03" y="895" width="244.98" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-32" target="YHqq5NevsVm51CY2uchS-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="558" y="1200" />
+              <mxPoint x="250" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="238.6206896551724" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-32" value="mountChildren(vnode.children,el)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="446.28" y="1030" width="222.48" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-36" target="YHqq5NevsVm51CY2uchS-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-36" value="处理 props，过滤掉与生命周期相关的属性" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1310" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-40" target="YHqq5NevsVm51CY2uchS-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-40" value="&lt;font color=&quot;#437aed&quot;&gt;设置原生标签 attrs 属性，设置原生事件。同时兼有 patch 修改功能&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1450" width="140" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-42" target="YHqq5NevsVm51CY2uchS-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-42" value="&lt;font color=&quot;#ff3333&quot;&gt;触发生命周期-&amp;gt; beforeMount() 钩子&lt;br&gt;，&lt;br&gt;vnodeHook-&amp;gt;onVnodeBeforeMount、&lt;br&gt;DirectiveHook-&amp;gt;beforeMount、&lt;br&gt;transition-&amp;gt;beforeEnter&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="135" y="1620" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-44" target="YHqq5NevsVm51CY2uchS-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-44" value="把el元素插入到container上,&lt;br&gt;hostInsert(el, container);&lt;br&gt;支持插入到特定元素的前面。" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="165" y="1760" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-46" value="触发mounted钩子&lt;br&gt;&quot;vnodeHook&amp;nbsp; -&amp;gt; onVnodeMounted&quot;&lt;br&gt;DirectiveHook&amp;nbsp; -&amp;gt; mounted&lt;br&gt;transition&amp;nbsp; -&amp;gt; enter" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="155" y="1920" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-50" target="YHqq5NevsVm51CY2uchS-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-50" value="procressElement" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1066.26" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-52" target="YHqq5NevsVm51CY2uchS-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-52" target="YHqq5NevsVm51CY2uchS-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-52" value="是挂载还是更新" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1069.39" y="550" width="113.74" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-56" target="YHqq5NevsVm51CY2uchS-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-56" value="mountComponent" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="565" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-59" target="YHqq5NevsVm51CY2uchS-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-59" value="创建 vNode 实例&lt;br&gt;vnode.component = createComponentInstance" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="705" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-61" target="YHqq5NevsVm51CY2uchS-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-61" value="初始化实例属性，setupState,render函数，设置实例上下文，创建实例代理为可读并处理自定义publicPrototypiseKey、emeit、template模板等等&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;setupComponent(instance)&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1212.5" y="862.5" width="215" height="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-63" target="YHqq5NevsVm51CY2uchS-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-67" value="设置 effect 的时候，如果没有设置懒加载&lt;br&gt;则会立即调用 effect 进行视图渲染。" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YHqq5NevsVm51CY2uchS-66">
+          <mxGeometry x="-0.0722" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-63" value="设置实例update方法&lt;br&gt;instance.update = effect(fn,{scheduler:queueJob(effect)})&lt;br&gt;scheduler 是更新effect 时候的自定义处理渲染的方式，&lt;br&gt;fn 是实例渲染相关内容" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1207.5" y="1040" width="225" height="111.25" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-65" target="YHqq5NevsVm51CY2uchS-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-65" value="调用 render函数，给渲染函数注入代理 context，得到 subTree（一个完整的vNode）" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="1270.01" width="150" height="79.99" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-75" target="YHqq5NevsVm51CY2uchS-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1760" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-68" target="YHqq5NevsVm51CY2uchS-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-68" target="YHqq5NevsVm51CY2uchS-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-68" value="触发 beforeMount hook&lt;br&gt;触发 onVnodeBeforeMount hook" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="1440" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-75" value="&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255)&quot;&gt;patch(null, subTree, container, instance);&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="1440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-84" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-81" target="YHqq5NevsVm51CY2uchS-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-81" value="触发 mounted hook" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="1580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-83" value="instance.isMounted = true;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="1720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-86">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="681" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="850" y="681" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-94" value="通过传递oldVnode和newVnode再次去调用 patch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YHqq5NevsVm51CY2uchS-93">
+          <mxGeometry x="-0.4297" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-86" value="patch(n1,n2,container)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YHqq5NevsVm51CY2uchS-54" target="YHqq5NevsVm51CY2uchS-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YHqq5NevsVm51CY2uchS-54" value="updateComponent" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="770" width="110" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
