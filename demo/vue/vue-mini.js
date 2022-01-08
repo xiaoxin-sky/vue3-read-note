@@ -129,11 +129,12 @@ const App = {
 // mount(App.render(), document.getElementById("app"));
 
 function mountApp(component, container) {
-  let isMount = false;
   let preVnode;
-  effect(() => {
+  let isMount = false;
+  effect(mountMain);
+  function mountMain() {
     if (!isMount) {
-      isMount = true
+      isMount = true;
       preVnode = component.render();
       mount(preVnode, container);
     } else {
@@ -141,6 +142,6 @@ function mountApp(component, container) {
       patch(preVnode, newVnode);
       preVnode = newVnode;
     }
-  });
+  }
 }
 mountApp(App, document.getElementById("app"));
