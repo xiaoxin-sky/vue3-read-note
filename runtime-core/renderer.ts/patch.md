@@ -199,3 +199,89 @@ patch(
 `increasingNewIndexSequence` 变量表示仅当节点已经被移动时，生成最长稳定子序列数组。向后遍历，因为这样我们可以使用最新的打过补丁的 node 作为锚点。
 
 这一步会挂载所有 newIndexToOldIndexMap 中还是 0 的节点。如果节点不为 0，那就需要进行移动。如果不是 0，并且是移动的话，需要判断 j 是否小于 0，如果小于 0 了，说明
+拿一个具体例子走一遍。
+
+```typescript
+test("moving single child forward", () => {
+  elm = renderChildren([1, 2, 3, 4]);
+  expect(elm.children.length).toBe(4);
+
+  elm = renderChildren([2, 3, 1, 4]);
+  expect(elm.children.length).toBe(4);
+  expect((elm.children as TestElement[]).map(inner)).toEqual([
+    "2",
+    "3",
+    "1",
+    "4",
+  ]);
+});
+```
+
+c1 = [1,2,3,4];
+
+c2 = [2,3,1,4];
+
+第一步：循环结果，i=0,e1 = 3, e2 = 3;
+
+第二步：i= 0 不变，e1 = 2，e2 = 2；
+
+由于 i<e1=e2；因此不存在 挂载与卸载操作。
+
+进入第五步完成已知序列 patch，处理未知序列。
+
+5.1
+
+s1 = s2 = 0;
+
+keyToNewIndexMap = {};
+
+从 s2 到 e2 进行遍历，结果是 keyToNewIndexMap 储存 3 个 key。
+
+```typescript
+// children key->children index
+keyToNewIndexMap：{
+	2:0,
+  3:1,
+  1:3,
+}
+```
+
+5.2
+
+patched = 0;
+
+toBePatched = 3;
+
+move = false;
+
+maxNexIndexSoFar = 0;
+
+newIndexToOldIndexMap = [];
+
+经过循环 toBePatched ，结果 newIndexToOldIndexMap = [0,0,0,0];
+
+循环 e1，找相同类型或者相同 key 的节点，进行 patch 找不到 unount；
+
+结果是：newIndexToOldIndexMap[3] = 1;
+
+newIndexToOldIndexMap[0] = 2;move = true;
+
+newIndexToOldIndexMap[1]=3;
+
+都进行过 patch 了。newIndexToOldIndexMap = [2,3,1];
+
+5.3
+
+increasingNewIndexSequence = [0,1] 获取最长子序列的索引。
+
+j=1;
+
+i = 2 increasingNewIndexSequence[1]=1;move;
+
+i = 1 increasingNewIndexSequence[1]=1; j--;
+
+i = 0 increasingNewIndexSequence[0]=0;j--;
+
+最后 i=-1, j=-1;
+
+5.3 的循环中，移动的条件是：没有稳定子序列(反序)或者当前节点不在稳定子序列中。
