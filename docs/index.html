@@ -1,6 +1,6 @@
 ---
-layout: default
-title: 我的Blog
+layout: post
+title: Blogging Like a Hacker
 ---
 
 <h2>{{ page.title }}</h2>
@@ -9,11 +9,8 @@ title: 我的Blog
 
 <ul>
   {% for post in site.posts %}
-
   <li>
-    {{ post.date | date_to_string }}
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
-
   {% endfor %}
 </ul>
