@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <ul>
-      　　　　{% for post in site.posts %} 　　　　　　
-      <li>
-        {{ post.date | date_to_string }}
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
+---
+layout: default
+title: 我的Blog
+---
 
-      　　　　{% endfor %} 　　
-    </ul>
-  </body>
-</html>
+<h2>{{ page.title }}</h2>
+
+<p>最新文章</p>
+
+<ul>
+  {% for post in site.posts %}
+
+  <li>
+    {{ post.date | date_to_string }}
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+  </li>
+
+  {% endfor %}
+</ul>
