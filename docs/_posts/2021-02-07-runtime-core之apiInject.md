@@ -1,3 +1,8 @@
+---
+layout: post
+title: provide-inject 函数式 api 实现
+---
+
 这个模块主要用来提供 vue 内 `provide` 和 `inject` API，这也是 vuex4.0、pinia 能够提供函数式 useStore 的关键。
 
 provide 函数
